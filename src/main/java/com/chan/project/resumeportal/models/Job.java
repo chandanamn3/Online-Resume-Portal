@@ -1,6 +1,9 @@
 package com.chan.project.resumeportal.models;
 
 import javax.persistence.*;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -14,7 +17,9 @@ public class Job {
     private int id;
     private String company;
     private String designation;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate startDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate endDate;
     private boolean isCurrentJob;
     @ElementCollection(targetClass=String.class)
@@ -81,10 +86,11 @@ public class Job {
     public LocalDate getEndDate() {
         return endDate;
     }
-
+    
     public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
+    
     public String getFormattedStartDate() {
         return startDate.format(DateTimeFormatter.ofPattern("MMM yyyy"));
     }
