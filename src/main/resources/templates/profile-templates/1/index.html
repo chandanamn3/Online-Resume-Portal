@@ -61,7 +61,9 @@
 					<p class="subDetails">
 						<span th:text="${job.formattedStartDate}">April 2011</span> -
 						<span th:text="${job.currentJob}? 'Present' : ${job.formattedEndDate}">Present</span></p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+					<ul th:each="responsibility : ${job.responsibilities}">
+						<li th:text="${responsibility}">Responsibility</li>
+					</ul>
 				</article>
 			</div>
 			<div class="clear"></div>
@@ -74,16 +76,9 @@
 			</div>
 
 			<div class="sectionContent">
-				<ul class="keySkills">
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-				</ul>
+					<ul class="keySkills" th:each="skill : ${userProfile.skills}">
+					<li th:text="${skill}">A Key Skill</li>
+					</ul>
 			</div>
 			<div class="clear"></div>
 		</section>
@@ -94,17 +89,11 @@
 				<h1>Education</h1>
 			</div>
 
-			<div class="sectionContent">
+			<div class="sectionContent" th:each="education : ${userProfile.educations}">
 				<article>
-					<h2>College/University</h2>
-					<p class="subDetails">Qualification</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
-				</article>
-
-				<article>
-					<h2>College/University</h2>
-					<p class="subDetails">Qualification</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
+					<h2 th:text="${education.college}">College/University</h2>
+					<p class="subDetails" th:text="${education.qualification}">Qualification</p>
+					<p th:text="${education.summary}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
 				</article>
 			</div>
 			<div class="clear"></div>
