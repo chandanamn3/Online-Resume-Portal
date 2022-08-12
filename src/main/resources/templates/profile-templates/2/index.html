@@ -119,8 +119,7 @@ dd.clear {
 
 	<div id="page-wrap">
 
-		<img src="../profile-templates/2/images/cthulu.png"
-			alt="Photo of Cthulu" id="pic" />
+		
 
 		<div id="contact-info" class="vcard">
 
@@ -178,26 +177,21 @@ dd.clear {
 			<dd class="clear"></dd>
 
 			<dt>Experience</dt>
-			<div>
-				<dd th:each="job : ${userProfile.jobs}">
-					<h2>
-						<span th:text="${job.designation}">Doomsday Cult</span> <span>Leader/Overlord
-							- Baton Rogue, LA - 1926-2010</span>
-					</h2>
-					<ul th:each="responsibility : ${job.responsibilities}">
-						<li th:text="${responsibility}">Responsibility</li>
-					</ul>
-			</div>
-			<h2>
-				The Watering Hole <span>Bartender/Server - Milwaukee, WI -
-					2009</span>
-			</h2>
-			<ul>
-				<li>Worked on grass-roots promotional campaigns</li>
-				<li>Reduced theft and property damage percentages</li>
-				<li>Janitorial work, Laundry</li>
-			</ul>
-			</dd>
+			<dd>
+                <h2>Doomsday Cult <span>Leader/Overlord - Baton Rogue, LA - 1926-2010</span></h2>
+                <ul>
+                    <li>Inspired and won highest peasant death competition among servants</li>
+                    <li>Helped coordinate managers to grow cult following</li>
+                    <li>Provided untimely deaths to all who opposed</li>
+                </ul>
+                
+                <h2>The Watering Hole <span>Bartender/Server - Milwaukee, WI - 2009</span></h2>
+                <ul>
+                    <li>Worked on grass-roots promotional campaigns</li>
+                    <li>Reduced theft and property damage percentages</li>
+                    <li>Janitorial work, Laundry</li>
+                </ul> 
+            </dd>
 
 			<dd class="clear"></dd>
 
