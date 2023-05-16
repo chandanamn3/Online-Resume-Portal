@@ -44,6 +44,8 @@ Select Other Themes:
 
 ![image](https://github.com/chandanamn3/Online-Resume-Portal/assets/75359245/ccf677ad-bee9-4a0f-9191-f3e8d2176316)
 
+![image](https://github.com/chandanamn3/Online-Resume-Portal/assets/75359245/63e567ac-6ce0-4ede-802c-b3f190f6c492)
+
 
 
 
